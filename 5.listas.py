@@ -11,7 +11,12 @@ VERDE = (0,255,0)
 VERDE_CLARO = (0,200,150)
 BLANCO = (255,255,255)
 
-ventana = pygame.display.set_mode((600, 300)) #Tamaño de la ventana, 500x200px
+ANCHO_VENTANA = 600
+ALTO_VENTANA = 300
+
+TAMAÑO_VENTANA = (ANCHO_VENTANA, ALTO_VENTANA)
+
+ventana = pygame.display.set_mode(ALTO_VENTANA) #Define las dimensiones de la ventana, devuelve una superficie
 pygame.display.set_caption("Mi primer ventana") #Título de la ventana
 #Traigo una imagen y la pongo como ícono:
 icono = pygame.image.load("gatito.jpg") #Load devuelve una superficie, carga una imagen
@@ -32,7 +37,7 @@ while flag == True: #Bucle infinito
 
     for nombre in lista_nombres:
         texto = fuente.render(nombre, False, ROJO, NEGRO)
-        ventana.blit(texto,(50,y)) #Pegate en la superficie
+        ventana.blit(texto,(50,y)) #Pegate en la superficie, vamos a ir bliteando (pegando superficies) sobre otras superficies
         y += 30
     pygame.display.update() #Actualiza todos los elementos
 

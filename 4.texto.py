@@ -9,7 +9,12 @@ VERDE = (0,255,0)
 VERDE_CLARO = (0,200,150)
 BLANCO = (255,255,255)
 
-ventana = pygame.display.set_mode((600, 300)) #Tamaño de la ventana, 500x200px
+ANCHO_VENTANA = 600
+ALTO_VENTANA = 300
+
+TAMAÑO_VENTANA = (ANCHO_VENTANA, ALTO_VENTANA)
+
+ventana = pygame.display.set_mode(TAMAÑO_VENTANA) #Tamaño de la ventana, 500x200px
 pygame.display.set_caption("Mi primer ventana") #Título de la ventana
 #Traigo una imagen y la pongo como ícono:
 icono = pygame.image.load("gatito.jpg") #Load devuelve una superficie, carga una imagen
